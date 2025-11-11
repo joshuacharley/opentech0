@@ -1,0 +1,63 @@
+[debug] [2025-11-11T21:58:37.375Z] ----------------------------------------------------------------------
+[debug] [2025-11-11T21:58:37.378Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-11-11T21:58:37.378Z] CLI Version:   14.24.2
+[debug] [2025-11-11T21:58:37.378Z] Platform:      win32
+[debug] [2025-11-11T21:58:37.378Z] Node Version:  v22.13.1
+[debug] [2025-11-11T21:58:37.379Z] Time:          Tue Nov 11 2025 21:58:37 GMT+0000 (Greenwich Mean Time)
+[debug] [2025-11-11T21:58:37.379Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\dell\Desktop\OpenTech
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-11-11T21:58:39.046Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-11T21:58:39.046Z] > authorizing via signed-in user (joshuacharley87@gmail.com)
+[debug] [2025-11-11T21:58:39.047Z] Checked if tokens are valid: true, expires at: 1762900881693
+[debug] [2025-11-11T21:58:39.048Z] Checked if tokens are valid: true, expires at: 1762900881693
+[debug] [2025-11-11T21:58:39.049Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/opentech-3c84f [none]
+[debug] [2025-11-11T21:58:41.469Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/opentech-3c84f 200
+[debug] [2025-11-11T21:58:41.469Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/opentech-3c84f {"projectId":"opentech-3c84f","projectNumber":"192197365649","displayName":"opentech","name":"projects/opentech-3c84f","resources":{"hostingSite":"opentech-3c84f"},"state":"ACTIVE","etag":"1_8bd77906-8d36-42ee-bea9-66fd6885207f"}
+[info] i  Using project opentech-3c84f (opentech) . 
+[info] 
+=== Hosting Setup
+[debug] [2025-11-11T21:58:41.486Z] Checked if tokens are valid: true, expires at: 1762900881693
+[debug] [2025-11-11T21:58:41.486Z] Checked if tokens are valid: true, expires at: 1762900881693
+[debug] [2025-11-11T21:58:41.486Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/opentech-3c84f [none]
+[debug] [2025-11-11T21:58:42.034Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/opentech-3c84f 200
+[debug] [2025-11-11T21:58:42.034Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/opentech-3c84f {"projectId":"opentech-3c84f","projectNumber":"192197365649","displayName":"opentech","name":"projects/opentech-3c84f","resources":{"hostingSite":"opentech-3c84f"},"state":"ACTIVE","etag":"1_8bd77906-8d36-42ee-bea9-66fd6885207f"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] 
+[info] i  Detected a .git folder at C:\Users\dell\Desktop\OpenTech 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=213281306&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-11-11T21:59:18.143Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2025-11-11T21:59:18.143Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2025-11-11T21:59:20.114Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2025-11-11T21:59:20.115Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2025-11-11T21:59:20.120Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2025-11-11T21:59:21.716Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2025-11-11T21:59:21.716Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"joshuacharley","id":34540432,"node_id":"MDQ6VXNlcjM0NTQwNDMy","avatar_url":"https://avatars.githubusercontent.com/u/34540432?v=4","gravatar_id":"","url":"https://api.github.com/users/joshuacharley","html_url":"https://github.com/joshuacharley","followers_url":"https://api.github.com/users/joshuacharley/followers","following_url":"https://api.github.com/users/joshuacharley/following{/other_user}","gists_url":"https://api.github.com/users/joshuacharley/gists{/gist_id}","starred_url":"https://api.github.com/users/joshuacharley/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/joshuacharley/subscriptions","organizations_url":"https://api.github.com/users/joshuacharley/orgs","repos_url":"https://api.github.com/users/joshuacharley/repos","events_url":"https://api.github.com/users/joshuacharley/events{/privacy}","received_events_url":"https://api.github.com/users/joshuacharley/received_events","type":"User","user_view_type":"private","site_admin":false,"name":"Joshuascharley","company":null,"blog":"https://joshuaportfolio.netlify.app/","location":"Sierra leone freetown","email":null,"hireable":null,"bio":"Fullstack Software Engineer  with expertise on mobile and web development. ","twitter_username":null,"notification_email":null,"public_repos":53,"public_gists":0,"followers":13,"following":40,"created_at":"2017-12-14T11:00:28Z","updated_at":"2025-11-10T06:25:19Z","private_gists":0,"total_private_repos":45,"owned_private_repos":45,"disk_usage":425498,"collaborators":4,"two_factor_authentication":true,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as joshuacharley 
+[info] 
