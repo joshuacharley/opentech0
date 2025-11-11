@@ -1,0 +1,13 @@
+Contact: mailto:info.opentech0@gmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://opentech.com/.well-known/security.txt
+
+# Security Policy
+# If you discover a security vulnerability, please report it to us at info.opentech0@gmail.com
+# We take all security reports seriously and will respond within 48 hours.
+# Please do not publicly disclose the issue until we have addressed it.
+
+# OpenTech Security Team
+# 81a Kaningo Road, Western Area, Freetown 01232, Sierra Leone
+# Phone: +232 79 949 614
