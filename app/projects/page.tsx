@@ -1,10 +1,16 @@
-"use client"
+"use client";
 
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Palette,
   Globe,
@@ -19,22 +25,34 @@ import {
   TrendingUp,
   Users,
   Zap,
-} from "lucide-react"
-import { useState } from "react"
-import Image from "next/image"
-import { CaseStudyModal } from "@/components/case-study-modal"
-import { ImageWatermark } from "@/components/image-watermark"
+} from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
+import { CaseStudyModal } from "@/components/case-study-modal";
+import { ImageWatermark } from "@/components/image-watermark";
 
 const projects = [
   {
-    title: "FinanceFlow - Banking Dashboard",
+    title: "FinanceFlow - Banking Dashboardss",
     client: "Global Finance Corp",
     category: "Web Application & UI/UX",
     description:
       "A comprehensive banking dashboard with real-time analytics, transaction management, and AI-powered insights for financial advisors.",
     image: "/modern-banking-dashboard.png",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "AI Analytics"],
-    services: ["UI/UX Design", "Web Application Development", "AI Solutions", "Data Analytics & BI"],
+    technologies: [
+      "ReactJS",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "AI Analytics",
+    ],
+    services: [
+      "UI/UX Design",
+      "Web Application Development",
+      "AI Solutions",
+      "Data Analytics & BI",
+    ],
     outcomes: [
       "40% increase in user engagement",
       "Reduced transaction processing time by 60%",
@@ -64,9 +82,21 @@ const projects = [
       position: "CTO, Global Finance Corp",
     },
     metrics: [
-      { label: "User Engagement", value: "+40%", description: "Increase in daily active users" },
-      { label: "Processing Speed", value: "60%", description: "Faster transaction processing" },
-      { label: "System Uptime", value: "99.9%", description: "Reliability achieved" },
+      {
+        label: "User Engagement",
+        value: "+40%",
+        description: "Increase in daily active users",
+      },
+      {
+        label: "Processing Speed",
+        value: "60%",
+        description: "Faster transaction processing",
+      },
+      {
+        label: "System Uptime",
+        value: "99.9%",
+        description: "Reliability achieved",
+      },
     ],
   },
   {
@@ -76,8 +106,20 @@ const projects = [
     description:
       "Real-time fleet tracking system with route optimization, driver behavior monitoring, and predictive maintenance alerts.",
     image: "/gps-fleet-tracking-map-interface.jpg",
-    technologies: ["React Native", "Node.js", "MongoDB", "Google Maps API", "WebSocket", "ML Models"],
-    services: ["GPS Tracking Software", "Mobile App Development", "System Architecture", "Cloud Solutions"],
+    technologies: [
+      "React Native",
+      "Node.js",
+      "MongoDB",
+      "Google Maps API",
+      "WebSocket",
+      "ML Models",
+    ],
+    services: [
+      "GPS Tracking Software",
+      "Mobile App Development",
+      "System Architecture",
+      "Cloud Solutions",
+    ],
     outcomes: [
       "30% reduction in fuel costs",
       "Tracking 5,000+ vehicles in real-time",
@@ -99,7 +141,8 @@ const projects = [
       "Deployed on AWS with auto-scaling capabilities to handle peak loads",
     ],
     timeline: "8 months",
-    teamSize: "10 professionals (3 mobile devs, 3 backend devs, 2 ML engineers, 2 DevOps)",
+    teamSize:
+      "10 professionals (3 mobile devs, 3 backend devs, 2 ML engineers, 2 DevOps)",
     testimonial: {
       quote:
         "FleetTrack Pro has revolutionized our operations. The real-time tracking and route optimization have saved us millions in fuel costs, and the predictive maintenance feature has prevented countless breakdowns. OpenTech delivered exactly what we needed.",
@@ -107,9 +150,21 @@ const projects = [
       position: "Operations Director, LogiTrans Solutions",
     },
     metrics: [
-      { label: "Fuel Savings", value: "30%", description: "Cost reduction achieved" },
-      { label: "Vehicles Tracked", value: "5,000+", description: "Real-time monitoring" },
-      { label: "Customer Satisfaction", value: "95%", description: "Client approval rating" },
+      {
+        label: "Fuel Savings",
+        value: "30%",
+        description: "Cost reduction achieved",
+      },
+      {
+        label: "Vehicles Tracked",
+        value: "5,000+",
+        description: "Real-time monitoring",
+      },
+      {
+        label: "Customer Satisfaction",
+        value: "95%",
+        description: "Client approval rating",
+      },
     ],
   },
   {
@@ -119,8 +174,20 @@ const projects = [
     description:
       "AI-powered healthcare assistant app that provides symptom analysis, appointment scheduling, and personalized health recommendations.",
     image: "/healthcare-ai-mobile-app-interface.jpg",
-    technologies: ["Flutter", "Python", "TensorFlow", "Firebase", "OpenAI API", "HIPAA Compliant"],
-    services: ["AI Solutions", "Mobile App Development", "Cybersecurity & Compliance", "API Development"],
+    technologies: [
+      "Flutter",
+      "Python",
+      "TensorFlow",
+      "Firebase",
+      "OpenAI API",
+      "HIPAA Compliant",
+    ],
+    services: [
+      "AI Solutions",
+      "Mobile App Development",
+      "Cybersecurity & Compliance",
+      "API Development",
+    ],
     outcomes: [
       "100,000+ active users",
       "85% accuracy in symptom analysis",
@@ -142,7 +209,8 @@ const projects = [
       "Conducted rigorous security audits and obtained HIPAA certification",
     ],
     timeline: "10 months",
-    teamSize: "12 professionals (2 UI/UX, 3 mobile devs, 3 AI/ML engineers, 2 security specialists, 2 QA)",
+    teamSize:
+      "12 professionals (2 UI/UX, 3 mobile devs, 3 AI/ML engineers, 2 security specialists, 2 QA)",
     testimonial: {
       quote:
         "The HealthCare AI Assistant has transformed how we engage with our patients. The AI accuracy is impressive, and our patients love the convenience of 24/7 access to health guidance. OpenTech's attention to HIPAA compliance gave us complete confidence in the solution.",
@@ -150,9 +218,21 @@ const projects = [
       position: "Chief Medical Officer, MediCare Plus",
     },
     metrics: [
-      { label: "Active Users", value: "100K+", description: "Monthly active users" },
-      { label: "AI Accuracy", value: "85%", description: "Symptom analysis precision" },
-      { label: "App Rating", value: "4.7★", description: "User satisfaction score" },
+      {
+        label: "Active Users",
+        value: "100K+",
+        description: "Monthly active users",
+      },
+      {
+        label: "AI Accuracy",
+        value: "85%",
+        description: "Symptom analysis precision",
+      },
+      {
+        label: "App Rating",
+        value: "4.7★",
+        description: "User satisfaction score",
+      },
     ],
   },
   {
@@ -162,8 +242,20 @@ const projects = [
     description:
       "Complete redesign and development of an e-commerce platform with improved user experience, faster checkout, and personalized recommendations.",
     image: "/modern-ecommerce-interface.png",
-    technologies: ["Next.js", "Stripe", "Redis", "Vercel", "Tailwind CSS", "Recommendation Engine"],
-    services: ["UI/UX Design", "Web Application Development", "API Integration", "Quality Assurance"],
+    technologies: [
+      "Next.js",
+      "Stripe",
+      "Redis",
+      "Vercel",
+      "Tailwind CSS",
+      "Recommendation Engine",
+    ],
+    services: [
+      "UI/UX Design",
+      "Web Application Development",
+      "API Integration",
+      "Quality Assurance",
+    ],
     outcomes: [
       "150% increase in conversion rate",
       "Page load time reduced by 70%",
@@ -193,9 +285,21 @@ const projects = [
       position: "CEO, ShopSmart Retail",
     },
     metrics: [
-      { label: "Conversion Rate", value: "+150%", description: "Increase in completed purchases" },
-      { label: "Load Time", value: "-70%", description: "Faster page performance" },
-      { label: "Mobile Sales", value: "+200%", description: "Growth in mobile revenue" },
+      {
+        label: "Conversion Rate",
+        value: "+150%",
+        description: "Increase in completed purchases",
+      },
+      {
+        label: "Load Time",
+        value: "-70%",
+        description: "Faster page performance",
+      },
+      {
+        label: "Mobile Sales",
+        value: "+200%",
+        description: "Growth in mobile revenue",
+      },
     ],
   },
   {
@@ -205,8 +309,20 @@ const projects = [
     description:
       "Complete cloud migration from on-premise infrastructure to AWS with zero downtime, automated CI/CD pipelines, and cost optimization.",
     image: "/cloud-infrastructure-dashboard.png",
-    technologies: ["AWS", "Docker", "Kubernetes", "Terraform", "Jenkins", "Monitoring Tools"],
-    services: ["Cloud Solutions & Migration", "DevOps & CI/CD", "System Architecture", "IT Support"],
+    technologies: [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Jenkins",
+      "Monitoring Tools",
+    ],
+    services: [
+      "Cloud Solutions & Migration",
+      "DevOps & CI/CD",
+      "System Architecture",
+      "IT Support",
+    ],
     outcomes: [
       "Zero downtime during migration",
       "50% reduction in infrastructure costs",
@@ -228,7 +344,8 @@ const projects = [
       "Executed phased migration with real-time monitoring and rollback capabilities",
     ],
     timeline: "7 months",
-    teamSize: "9 professionals (3 DevOps engineers, 2 cloud architects, 2 developers, 2 support)",
+    teamSize:
+      "9 professionals (3 DevOps engineers, 2 cloud architects, 2 developers, 2 support)",
     testimonial: {
       quote:
         "The cloud migration was flawless. OpenTech's team managed the entire process with zero downtime, and we're now saving 50% on infrastructure costs while deploying updates in minutes instead of days. Their expertise in DevOps is world-class.",
@@ -236,9 +353,21 @@ const projects = [
       position: "VP of Engineering, TechCorp Industries",
     },
     metrics: [
-      { label: "Cost Savings", value: "50%", description: "Infrastructure cost reduction" },
-      { label: "Deployment Speed", value: "99%", description: "Faster release cycles" },
-      { label: "System Uptime", value: "99.99%", description: "Availability achieved" },
+      {
+        label: "Cost Savings",
+        value: "50%",
+        description: "Infrastructure cost reduction",
+      },
+      {
+        label: "Deployment Speed",
+        value: "99%",
+        description: "Faster release cycles",
+      },
+      {
+        label: "System Uptime",
+        value: "99.99%",
+        description: "Availability achieved",
+      },
     ],
   },
   {
@@ -248,8 +377,20 @@ const projects = [
     description:
       "Enterprise business intelligence platform with real-time dashboards, predictive analytics, and automated reporting for retail operations.",
     image: "/business-intelligence-analytics-dashboard.jpg",
-    technologies: ["Python", "Apache Spark", "Tableau", "PostgreSQL", "Machine Learning", "REST API"],
-    services: ["Data Analytics & BI", "API Development", "System Architecture", "Digital Transformation"],
+    technologies: [
+      "Python",
+      "Apache Spark",
+      "Tableau",
+      "PostgreSQL",
+      "Machine Learning",
+      "REST API",
+    ],
+    services: [
+      "Data Analytics & BI",
+      "API Development",
+      "System Architecture",
+      "Digital Transformation",
+    ],
     outcomes: [
       "Processing 10M+ transactions daily",
       "Inventory optimization saved $2M annually",
@@ -271,7 +412,8 @@ const projects = [
       "Deployed automated reporting system with scheduled insights delivery",
     ],
     timeline: "9 months",
-    teamSize: "11 professionals (2 data architects, 3 data engineers, 3 ML engineers, 2 BI developers, 1 PM)",
+    teamSize:
+      "11 professionals (2 data architects, 3 data engineers, 3 ML engineers, 2 BI developers, 1 PM)",
     testimonial: {
       quote:
         "DataInsight has transformed how we run our business. We now have real-time visibility into all our operations, and the predictive analytics have saved us millions in inventory costs. OpenTech delivered a solution that exceeded our expectations.",
@@ -279,9 +421,21 @@ const projects = [
       position: "Chief Data Officer, RetailChain Group",
     },
     metrics: [
-      { label: "Daily Transactions", value: "10M+", description: "Data processing capacity" },
-      { label: "Annual Savings", value: "$2M", description: "Inventory optimization" },
-      { label: "Decision Speed", value: "+65%", description: "Faster insights delivery" },
+      {
+        label: "Daily Transactions",
+        value: "10M+",
+        description: "Data processing capacity",
+      },
+      {
+        label: "Annual Savings",
+        value: "$2M",
+        description: "Inventory optimization",
+      },
+      {
+        label: "Decision Speed",
+        value: "+65%",
+        description: "Faster insights delivery",
+      },
     ],
   },
   {
@@ -291,8 +445,20 @@ const projects = [
     description:
       "Comprehensive fitness app with AI-powered workout plans, nutrition tracking, and social features for community engagement.",
     image: "/fitness-mobile-app-workout-interface.jpg",
-    technologies: ["React Native", "Node.js", "MongoDB", "AI/ML", "Push Notifications", "Payment Gateway"],
-    services: ["Mobile App Development", "AI Solutions", "UI/UX Design", "API Development"],
+    technologies: [
+      "React Native",
+      "Node.js",
+      "MongoDB",
+      "AI/ML",
+      "Push Notifications",
+      "Payment Gateway",
+    ],
+    services: [
+      "Mobile App Development",
+      "AI Solutions",
+      "UI/UX Design",
+      "API Development",
+    ],
     outcomes: [
       "500,000+ downloads in 6 months",
       "4.8-star rating on app stores",
@@ -314,7 +480,8 @@ const projects = [
       "Set up push notification system for workout reminders and motivational messages",
     ],
     timeline: "6 months",
-    teamSize: "8 professionals (2 UI/UX, 3 mobile devs, 2 AI engineers, 1 backend dev)",
+    teamSize:
+      "8 professionals (2 UI/UX, 3 mobile devs, 2 AI engineers, 1 backend dev)",
     testimonial: {
       quote:
         "FitLife has been a massive success. The AI personalization keeps users coming back, and the social features have created an amazing community. OpenTech's team understood our vision and delivered a product that users absolutely love.",
@@ -324,7 +491,11 @@ const projects = [
     metrics: [
       { label: "Downloads", value: "500K+", description: "In first 6 months" },
       { label: "App Rating", value: "4.8★", description: "User satisfaction" },
-      { label: "Retention Rate", value: "80%", description: "Monthly active users" },
+      {
+        label: "Retention Rate",
+        value: "80%",
+        description: "Monthly active users",
+      },
     ],
   },
   {
@@ -334,9 +505,26 @@ const projects = [
     description:
       "Enterprise-grade API gateway with advanced security features, rate limiting, and comprehensive monitoring for banking services.",
     image: "/api-gateway-security-dashboard.jpg",
-    technologies: ["Kong", "OAuth 2.0", "JWT", "Redis", "Elasticsearch", "Grafana"],
-    services: ["API Development & Integration", "Cybersecurity & Compliance", "System Architecture", "DevOps"],
-    outcomes: ["Handling 1M+ API calls per day", "Zero security breaches", "99.99% API uptime", "PCI DSS compliant"],
+    technologies: [
+      "Kong",
+      "OAuth 2.0",
+      "JWT",
+      "Redis",
+      "Elasticsearch",
+      "Grafana",
+    ],
+    services: [
+      "API Development & Integration",
+      "Cybersecurity & Compliance",
+      "System Architecture",
+      "DevOps",
+    ],
+    outcomes: [
+      "Handling 1M+ API calls per day",
+      "Zero security breaches",
+      "99.99% API uptime",
+      "PCI DSS compliant",
+    ],
     icon: Server,
     color: "from-violet-500 to-purple-500",
     challenge:
@@ -352,7 +540,8 @@ const projects = [
       "Achieved PCI DSS compliance through rigorous security audits",
     ],
     timeline: "8 months",
-    teamSize: "10 professionals (3 backend devs, 3 security engineers, 2 DevOps, 2 QA)",
+    teamSize:
+      "10 professionals (3 backend devs, 3 security engineers, 2 DevOps, 2 QA)",
     testimonial: {
       quote:
         "The API gateway has been rock solid since deployment. OpenTech's security expertise gave us confidence in handling sensitive banking data, and the monitoring capabilities have been invaluable. We've had zero security incidents and excellent performance.",
@@ -365,23 +554,30 @@ const projects = [
       { label: "Uptime", value: "99.99%", description: "API availability" },
     ],
   },
-]
+];
 
 export default function ProjectsPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All")
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
-  const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof projects)[0] | null
+  >(null);
+  const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false);
 
-  const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category.split(" & ")[0])))]
+  const categories = [
+    "All",
+    ...Array.from(new Set(projects.map((p) => p.category.split(" & ")[0]))),
+  ];
 
   const filteredProjects =
-    selectedCategory === "All" ? projects : projects.filter((p) => p.category.includes(selectedCategory))
+    selectedCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category.includes(selectedCategory));
 
   const openCaseStudy = (project: (typeof projects)[0]) => {
-    setSelectedProject(project)
-    setIsCaseStudyOpen(true)
-  }
+    setSelectedProject(project);
+    setIsCaseStudyOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -395,11 +591,16 @@ export default function ProjectsPage() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-            <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">Portfolio</Badge>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-balance">Projects Delivered</h1>
+            <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
+              Portfolio
+            </Badge>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-balance">
+              Projects Delivered
+            </h1>
             <p className="text-xl text-muted-foreground text-pretty leading-relaxed max-w-2xl mx-auto">
-              Explore our portfolio of successful projects across various industries. Each project showcases our
-              expertise in delivering innovative solutions that drive real business results.
+              Explore our portfolio of successful projects across various
+              industries. Each project showcases our expertise in delivering
+              innovative solutions that drive real business results.
             </p>
           </div>
 
@@ -424,7 +625,7 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => {
-              const Icon = project.icon
+              const Icon = project.icon;
               return (
                 <Card
                   key={index}
@@ -449,7 +650,9 @@ export default function ProjectsPage() {
                       >
                         <Icon className="h-6 w-6 text-white" />
                       </div>
-                      <Badge className="bg-background/80 backdrop-blur-sm">{project.category}</Badge>
+                      <Badge className="bg-background/80 backdrop-blur-sm">
+                        {project.category}
+                      </Badge>
                     </div>
                   </div>
 
@@ -465,7 +668,9 @@ export default function ProjectsPage() {
                         </div>
                       </div>
                     </div>
-                    <CardDescription className="text-base leading-relaxed">{project.description}</CardDescription>
+                    <CardDescription className="text-base leading-relaxed">
+                      {project.description}
+                    </CardDescription>
                   </CardHeader>
 
                   <CardContent className="space-y-6">
@@ -477,7 +682,11 @@ export default function ProjectsPage() {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, i) => (
-                          <Badge key={i} variant="secondary" className="text-xs">
+                          <Badge
+                            key={i}
+                            variant="secondary"
+                            className="text-xs"
+                          >
                             {tech}
                           </Badge>
                         ))}
@@ -492,7 +701,11 @@ export default function ProjectsPage() {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {project.services.map((service, i) => (
-                          <Badge key={i} variant="outline" className="text-xs border-accent/30">
+                          <Badge
+                            key={i}
+                            variant="outline"
+                            className="text-xs border-accent/30"
+                          >
                             {service}
                           </Badge>
                         ))}
@@ -507,7 +720,10 @@ export default function ProjectsPage() {
                       </h4>
                       <ul className="space-y-2">
                         {project.outcomes.map((outcome, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-sm text-muted-foreground"
+                          >
                             <CheckCircle2 className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
                             <span>{outcome}</span>
                           </li>
@@ -526,7 +742,7 @@ export default function ProjectsPage() {
                     </Button>
                   </CardContent>
                 </Card>
-              )
+              );
             })}
           </div>
         </div>
@@ -534,7 +750,11 @@ export default function ProjectsPage() {
 
       {/* Case Study Modal */}
       {selectedProject && (
-        <CaseStudyModal isOpen={isCaseStudyOpen} onClose={() => setIsCaseStudyOpen(false)} project={selectedProject} />
+        <CaseStudyModal
+          isOpen={isCaseStudyOpen}
+          onClose={() => setIsCaseStudyOpen(false)}
+          project={selectedProject}
+        />
       )}
 
       {/* CTA Section */}
@@ -542,10 +762,12 @@ export default function ProjectsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-background" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-balance">Ready to Start Your Project?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-balance">
+              Ready to Start Your Project?
+            </h2>
             <p className="text-lg text-muted-foreground mb-8 text-pretty leading-relaxed">
-              Let's discuss how we can help transform your ideas into successful digital solutions. Our team is ready to
-              bring your vision to life.
+              Let's discuss how we can help transform your ideas into successful
+              digital solutions. Our team is ready to bring your vision to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="group" asChild>
@@ -564,5 +786,5 @@ export default function ProjectsPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
