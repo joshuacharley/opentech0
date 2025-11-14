@@ -37,7 +37,7 @@ const projects = [
     client: "Global Finance Corp",
     category: "Web Application & UI/UX",
     description:
-      "A comprehensive banking dashboard with real-time analytics, transaction management, and AI-powered insights for financial advisors.",
+      "A comprehensive bankingss dashboard with real-time analytics, transaction management, and AI-powered insights for financial advisors.",
     image: "/modern-banking-dashboard.png",
     technologies: [
       "ReactJS",
